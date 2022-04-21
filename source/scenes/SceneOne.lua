@@ -1,80 +1,80 @@
 --
--- SceneTemplate.lua
+-- SceneOne.lua
 --
 -- Use this as a starting point for your game's scenes. Copy this file to your root "scenes" directory,
--- rename it as you like, and then replace all instances of "SceneTemplate" with your scene's name.
+-- rename it as you like, and then replace all instances of "SceneOne" with your scene's name.
 --
 
-SceneTemplate = {}
-class("SceneTemplate").extends(NobleScene)
+SceneOne = {}
+class("SceneOne").extends(NobleScene)
 
 -- It is recommended that you declare, but don't yet define, your scene-specific varibles and methods here. Use "local" where possible.
 --
--- local variable1 = nil
--- SceneTemplate.variable2 = nil
+local variable1 = nil
+SceneOne.variable2 = nil
 -- ...
 --
 
-SceneTemplate.backgroundColor = Graphics.kColorWhite		-- This is the background color of this scene.
+SceneOne.backgroundColor = Graphics.kColorBlack		-- This is the background color of this scene.
 
 -- This runs when your scene's object is created, which is the first thing that happens when transitining away from another scene.
-function SceneTemplate:init()
-	SceneTemplate.super.init(self)
+function SceneOne:init()
+	SceneOne.super.init(self)
 
-	-- variable1 = 100
-	-- SceneTemplate.variable2 = "string"
+	variable1 = 100
+	SceneOne.variable2 = "This is Gaurav"
 	-- ...
 
 	-- Your code here
 end
 
 -- When transitioning from another scene, this runs as soon as this scene needs to be visible (this moment depends on which transition type is used).
-function SceneTemplate:enter()
-	SceneTemplate.super.enter(self)
+function SceneOne:enter()
+	SceneOne.super.enter(self)
 	-- Your code here
 end
 
 -- This runs once a transition from another scene is complete.
-function SceneTemplate:start()
-	SceneTemplate.super.start(self)
+function SceneOne:start()
+	SceneOne.super.start(self)
 	-- Your code here
 end
 
 -- This runs once per frame.
-function SceneTemplate:update()
-	SceneTemplate.super.update(self)
+function SceneOne:update()
+	SceneOne.super.update(self)
 	-- Your code here
 end
 
 -- This runs once per frame, and is meant for drawing code.
-function SceneTemplate:drawBackground()
-	SceneTemplate.super.drawBackground(self)
+function SceneOne:drawBackground()
+	SceneOne.super.drawBackground(self)
 	-- Your code here
 end
 
 -- This runs as as soon as a transition to another scene begins.
-function SceneTemplate:exit()
-	SceneTemplate.super.exit(self)
+function SceneOne:exit()
+	SceneOne.super.exit(self)
 	-- Your code here
 end
 
 -- This runs once a transition to another scene completes.
-function SceneTemplate:finish()
-	SceneTemplate.super.finish(self)
+function SceneOne:finish()
+	SceneOne.super.finish(self)
 	-- Your code here
 end
 
-function SceneTemplate:pause()
-	SceneTemplate.super.pause(self)
+function SceneOne:pause()
+	SceneOne.super.pause(self)
 	-- Your code here
 end
-function SceneTemplate:resume()
-	SceneTemplate.super.resume(self)
+function SceneOne:resume()
+	SceneOne.super.resume(self)
 	-- Your code here
 end
 
 -- You can define this here, or within your scene's init() function.
-SceneTemplate.inputHandler = {
+SceneOne.inputHandler = {
 
 	-- A button
 	--
@@ -95,6 +95,7 @@ SceneTemplate.inputHandler = {
 	--
 	BButtonDown = function()
 		-- Your code here
+		Noble.transition(ExampleScene)
 	end,
 	BButtonHeld = function()
 		-- Your code here

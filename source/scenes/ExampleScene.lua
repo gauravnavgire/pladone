@@ -16,7 +16,7 @@ function ExampleScene:init()
 	background = Graphics.image.new("assets/images/background1")
 	logo = Graphics.image.new("libraries/noble/assets/images/NobleRobotLogo")
 
-	menu = Noble.Menu.new(false, Noble.Text.ALIGN_LEFT, false, Graphics.kColorWhite, 4,6,0, Noble.Text.FONT_SMALL)
+	menu = Noble.Menu.new(false, Noble.Text.ALIGN_LEFT, false, Graphics.kColorWhite, 3,6,0, Noble.Text.FONT_SMALL)
 
 	menu:addItem(Noble.TransitionType.DIP_TO_BLACK, function() Noble.transition(ExampleScene2, 1, Noble.TransitionType.DIP_TO_BLACK) end)
 	menu:addItem(Noble.TransitionType.DIP_TO_WHITE, function() Noble.transition(ExampleScene2, 1, Noble.TransitionType.DIP_TO_WHITE) end)
@@ -38,6 +38,7 @@ function ExampleScene:init()
 		nil,
 		"Difficulty: " .. Noble.Settings.get("Difficulty")
 	)
+	menu:addItem("GoTo Scene2", function() Noble.transition(SceneOne, 1, Noble.TransitionType.CUT) end)
 
 	local crankTick = 0
 
