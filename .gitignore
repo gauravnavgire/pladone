@@ -44,3 +44,8 @@ luac.out
 builds/
 
 source/libraries/noble/docs/
+
+.DS_Store
+source/.DS_Store
+
+*.pdx
