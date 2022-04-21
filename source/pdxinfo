@@ -1,7 +1,7 @@
-name=A Noble Engine Game
-author=A Lovely Developer
+name=My First Playdate Game
+author=Gaurav Navgire
 description=This is a Noble Engine game.
-bundleID=com.yourdomain.GameName
+bundleID=com.gauravnavgire
 version=0.0.1
 buildNumber=1
 imagePath=assets/launcher/
